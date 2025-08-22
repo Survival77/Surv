@@ -1,0 +1,210 @@
+/* Basic layout for the stationery app */
+:root {
+	--brand: #2b2d42;
+	--accent: #ef8354;
+	--bg: #f7f5f2;
+	--text: #333333;
+}
+
+body {
+	background: var(--bg);
+	color: var(--text);
+}
+
+.app {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 1.25rem;
+	background: #ffffff;
+	border-bottom: 1px solid #e6e1dc;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+
+.brand {
+	font-weight: 700;
+	font-size: 1.1rem;
+	color: var(--brand);
+	text-decoration: none;
+}
+
+.nav {
+	display: flex;
+	gap: 1rem;
+}
+
+.nav a {
+	text-decoration: none;
+	color: var(--text);
+	padding: 0.25rem 0.5rem;
+	border-radius: 6px;
+}
+
+.nav a.active {
+	background: var(--accent);
+	color: white;
+}
+
+.main {
+	flex: 1;
+	padding: 2rem 1.25rem;
+}
+
+.page {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.product-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+	gap: 1rem;
+	margin-top: 1rem;
+}
+
+.product-card {
+	background: #fff;
+	border: 1px solid #ece7e1;
+	border-radius: 10px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.product-media {
+	aspect-ratio: 4/3;
+	background: #faf7f3;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.media-fallback {
+	width: 60%;
+	height: 60%;
+	background: repeating-linear-gradient(
+		45deg,
+		#f0ece7,
+		#f0ece7 10px,
+		#e7e2db 10px,
+		#e7e2db 20px
+	);
+	border-radius: 8px;
+}
+
+.product-info {
+	padding: 0.75rem 0.9rem 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.product-actions {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.price {
+	font-weight: 600;
+}
+
+.btn {
+	appearance: none;
+	background: #2b2d42;
+	color: #fff;
+	border: none;
+	border-radius: 8px;
+	padding: 0.45rem 0.8rem;
+	cursor: pointer;
+}
+
+.btn.primary { background: #2b2d42; }
+.btn.danger { background: #a83232; }
+.btn.subtle { background: transparent; color: #2b2d42; border: 1px solid #d9d3cc; }
+
+.cart-list {
+	list-style: none;
+	margin: 1rem 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.cart-row {
+	background: #fff;
+	border: 1px solid #ece7e1;
+	border-radius: 10px;
+	padding: 0.75rem 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.row-actions {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+}
+
+.cart-summary {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	justify-content: flex-end;
+	margin-top: 0.5rem;
+}
+
+.muted { color: #6e6860; }
